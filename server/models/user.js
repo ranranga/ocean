@@ -21,6 +21,7 @@ const UserSchema = new Schema({
     created: { type: Date, default: Date.now }
 });
 
+// Function to encrypt the password before saving
 UserSchema.pre('save', function(next) {
     var user = this;
 

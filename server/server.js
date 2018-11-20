@@ -14,7 +14,7 @@ mongoose.connect(config.database, err => {
     } else {
         console.log('Connected to the database');
     }
-})
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
