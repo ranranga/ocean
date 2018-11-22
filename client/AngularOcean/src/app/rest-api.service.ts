@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,11 @@ import { HttpClient } from '@angular/common/http';
 export class RestApiService {
 
   constructor(private http: HttpClient) { }
+
+ getHeaders() {
+   const token = localStorage.getItem('token');
+   return token ? new HttpHeaders().set('Authrization', token) : null;
+ }
 
   get(link: string) {
     return this.http.get(link).toPromise();
