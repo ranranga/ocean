@@ -7,7 +7,7 @@ import { NavigationStart, Router } from '@angular/router';
 })
 export class DataService {
   message = '';
-  messageType = 'danger';
+  messageType = '';
 
   user: any;
 

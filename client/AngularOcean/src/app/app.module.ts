@@ -12,10 +12,14 @@ import { RegistrationComponent } from './registration/registration.component';
 
 import { RestApiService } from './rest-api.service';
 import { DataService } from './data.service';
+import { AuthGuardService } from './auth-guard.service';
+
+
 import { MessageComponent } from './message/message.component';
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
+  // Contains the list of components in our app
   declarations: [
     AppComponent,
     HomeComponent,
@@ -23,6 +27,7 @@ import { LoginComponent } from './login/login.component';
     MessageComponent,
     LoginComponent
   ],
+  // List of dependencies that our app has
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,7 +35,9 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [RestApiService, DataService],
+  // List of services used in our app
+  providers: [RestApiService, DataService, AuthGuardService],
+  // List of components that'll be bootstrapped when app module is bootstrapped
   bootstrap: [AppComponent]
 })
 export class AppModule { }

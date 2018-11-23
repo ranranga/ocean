@@ -9,7 +9,7 @@ import {
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuardService {
+export class AuthGuardService implements CanActivate {
 
   constructor(private router: Router) { }
 
