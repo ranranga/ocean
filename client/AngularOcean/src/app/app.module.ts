@@ -17,6 +17,7 @@ import { AuthGuardService } from './auth-guard.service';
 
 import { MessageComponent } from './message/message.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   // Contains the list of components in our app
@@ -25,7 +26,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     RegistrationComponent,
     MessageComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   // List of dependencies that our app has
   imports: [
